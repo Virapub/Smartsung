@@ -1,36 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Smartsung</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>KitchenLink - Smart Gadgets Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li>
-                    <input type="text" id="search" placeholder="Search products...">
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="products">
-            <h2>Products</h2>
-            <div id="product-list" class="row">
-                <!-- Products will be loaded here via JavaScript -->
+    <nav role="navigation">
+        <div class="nav-container">
+            <div class="logo" aria-label="KitchenLink Logo">KitchenLink</div>
+            <button class="hamburger" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+            <div class="links">
+                <a href="index.html" class="active">Home</a>
+                <a href="products.html">Products</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Meal Plans <i class="fas fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="meal-prep.html">Budget Plan</a>
+                        <a href="office-meal-plan.html">Office Plan</a>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
-    <footer>
-        <p>Contact us at virapublishers@gmail.com</p>
+        </div>
+    </nav>
+
+    <header role="banner">
+        <h1>KitchenLink – Smart Kitchen Gadgets</h1>
+        <p>Your one-stop shop for smart & affordable tools</p>
+    </header>
+
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Search gadgets or meals..." aria-label="Search kitchen gadgets or meal plans">
+    </div>
+
+    <div class="search-results" id="searchResults"></div>
+
+    <main class="products" id="productList" role="region" aria-label="Product list"> 
+        <div class="product" id="inkbird-thermometer" data-name="INKBIRD Bluetooth Meat Thermometer">
+  <div class="image-container">
+    <img src="https://m.media-amazon.com/images/I/71UtnkqnYCL._SL1500_.jpg" alt="INKBIRD Bluetooth Meat Thermometer">
+  </div>
+  <div class="product-content">
+    <div class="title">INKBIRD Bluetooth Meat Thermometer</div>
+    <div class="price">₹2,090 / $25.18</div>
+    <a href="https://amzn.to/3TjlTvu" class="buy" target="_blank" rel="noopener">Buy Now</a>
+  </div>
+</div>
+
+<div class="product" id="bbqgo-gloves" data-name="BBQGO BBQ Grill Gloves">
+  <div class="image-container">
+    <img src="https://m.media-amazon.com/images/I/61vMY+WRAZL._SL1500_.jpg" alt="BBQGO BBQ Grill Gloves">
+  </div>
+  <div class="product-content">
+    <div class="title">BBQGO BBQ Grill Gloves</div>
+    <div class="price">₹1,292 / $15.57</div>
+    <a href="https://amzn.to/3ZTGlXp" class="buy" target="_blank" rel="noopener">Buy Now</a>
+  </div>
+</div>
+
+<div class="product" id="breakfast-maker" data-name="Electric Breakfast Sandwich Maker">
+  <div class="image-container">
+    <img src="https://m.media-amazon.com/images/I/61LUXbVnxjL._SL1500_.jpg" alt="Electric Breakfast Sandwich Maker">
+  </div>
+  <div class="product-content">
+    <div class="title">Electric Breakfast Sandwich Maker</div>
+    <div class="price">₹5,699 / $68.66</div>
+    <a href="https://amzn.to/3TRB1Ae" class="buy" target="_blank" rel="noopener">Buy Now</a>
+  </div>
+</div>
+
+<div class="product" id="mini-chopper" data-name="Mini Food Chopper">
+  <div class="image-container">
+    <img src="https://m.media-amazon.com/images/I/61UmnOTKVFL._SL1080_.jpg" alt="Mini Food Chopper">
+  </div>
+  <div class="product-content">
+    <div class="title">Mini Food Chopper</div>
+    <div class="price">₹3,700 / $44.58</div>
+    <a href="https://amzn.to/3ZXneM8" class="buy" target="_blank" rel="noopener">Buy Now</a>
+  </div>
+</div>
+
+<div class="product" id="smart-scale" data-name="Smart Measuring Spoon/Scale">
+  <div class="image-container">
+    <img src="https://m.media-amazon.com/images/I/71yo8PyCRwL._SL1500_.jpg" alt="Smart Measuring Spoon/Scale">
+  </div>
+  <div class="product-content">
+    <div class="title">Smart Measuring Spoon/Scale</div>
+    <div class="price">₹1,199 / $14.45</div>
+    <a href="https://amzn.to/4l6Z1eD" class="buy" target="_blank" rel="noopener">Buy Now</a>
+  </div>
+</div>
+
+<div class="product" id="auto-stirrer" data-name="Automatic Stirring Pot Tool">
+  <div class="image-container">
+    <img src="https://m.media-amazon.com/images/I/61YUQzBHRpL._SL1500_.jpg" alt="Automatic Stirring Pot Tool">
+  </div>
+  <div class="product-content">
+    <div class="title">Automatic Stirring Pot Tool</div>
+    <div class="price">₹13,475.98 / $162.36</div>
+    <a href="https://amzn.to/4kljH1o" class="buy" target="_blank" rel="noopener">Buy Now</a>
+  </div>
+</div>
+
+<div class="product" id="spice-rack" data-name="Magnetic Spice Rack Organizer">
+  <div class="image-container">
+    <img src="https://m.media-amazon.com/images/I/71ILXxzPrnL._SL1500_.jpg" alt="Magnetic Spice Rack Organizer">
+  </div>
+  <div class="product-content">
+    <div class="title">Magnetic Spice Rack Organizer</div>
+    <div class="price">₹2,299 / $27.70</div>
+    <a href="https://amzn.to/40xGaBh" class="buy" target="_blank" rel="noopener">Buy Now</a>
+  </div>
+</div>
+
+<div class="product" id="veg-slicer" data-name="Multi-Function Vegetable Slicer">
+  <div class="image-container">
+    <img src="https://m.media-amazon.com/images/I/714KMq8ALwL._SL1500_.jpg" alt="Multi-Function Vegetable Slicer">
+  </div>
+  <div class="product-content">
+    <div class="title">Multi-Function Vegetable Slicer</div>
+    <div class="price">₹3,499 / $42.16</div>
+    <a href="https://amzn.to/40y9ebL" class="buy" target="_blank" rel="noopener">Buy Now</a>
+  </div>
+</div>
+
+<div class="product" id="cabinet-light" data-name="Under Cabinet Lighting (Rechargeable)">
+  <div class="image-container">
+    <img src="https://m.media-amazon.com/images/I/71XvKLC3GgL._SL1500_.jpg" alt="Under Cabinet Lighting Rechargeable">
+  </div>
+  <div class="product-content">
+    <div class="title">Under Cabinet Lighting (Rechargeable)</div>
+    <div class="price">₹699 / $8.42</div>
+    <a href="https://amzn.to/3I92T05" class="buy" target="_blank" rel="noopener">Buy Now</a>
+  </div>
+</div>
+
+<div class="product" id="silicone-bags" data-name="Reusable Silicone Zip Bags">
+  <div class="image-container">
+    <img src="https://m.media-amazon.com/images/I/81ioPY352VL._SL1500_.jpg" alt="Reusable Silicone Zip Bags">
+  </div>
+  <div class="product-content">
+    <div class="title">Reusable Silicone Zip Bags</div>
+    <div class="price">₹700 / $8.43</div>
+    <a href="https://amzn.to/4keOzR1" class="buy" target="_blank" rel="noopener">Buy Now</a>
+  </div>
+</div>
+
+<div class="product" id="tap-filter" data-name="Smart Tap Water Filter Dispenser">
+  <div class="image-container">
+    <img src="https://m.media-amazon.com/images/I/51vG9anK5GL.jpg" alt="Smart Tap Water Filter Dispenser">
+  </div>
+  <div class="product-content">
+    <div class="title">Smart Tap Water Filter Dispenser</div>
+    <div class="price">₹299 / $3.60</div>
+    <a href="https://amzn.to/4etDQBd" class="buy" target="_blank" rel="noopener">Buy Now</a>
+  </div>
+</div>
+        <div class="product" id="breakfast-station" data-name="3-in-1 Breakfast Maker">
+    <div class="image-container">
+      <img src="https://m.media-amazon.com/images/I/619zlfuWKgL._SL1001_.jpg" alt="3-in-1 Breakfast Maker">
+    </div>
+    <div class="product-content">
+      <div class="title">3-in-1 Breakfast Maker</div>
+      <div class="price">Up to ₹8,000 / $95.99</div>
+      <a href="https://amzn.to/45K1VkQ" class="buy" target="_blank" rel="noopener">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product" id="multi-cooker" data-name="Prestige Multi-Cooker 1.5L">
+    <div class="image-container">
+      <img src="https://m.media-amazon.com/images/I/71OHF3Zl0bL._SL1500_.jpg" alt="Prestige Multi-Cooker">
+    </div>
+    <div class="product-content">
+      <div class="title">Prestige Multi-Cooker 1.5L</div>
+      <div class="price">Under ₹2,500 / $29.99</div>
+      <a href="https://amzn.to/4kll3ZT" class="buy" target="_blank" rel="noopener">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product" id="atomberg-mixer" data-name="Atomberg Zenova Mixer Grinder">
+    <div class="image-container">
+      <img src="https://m.media-amazon.com/images/I/81haDHz+llL._SL1500_.jpg" alt="Atomberg Zenova Mixer Grinder">
+    </div>
+    <div class="product-content">
+      <div class="title">Atomberg Zenova Mixer Grinder</div>
+      <div class="price">Up to ₹7,000 / $84.99</div>
+      <a href="https://amzn.to/4ex7lCf" class="buy" target="_blank" rel="noopener">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product" id="philips-air-fryer" data-name="Philips Air Fryer">
+    <div class="image-container">
+      <img src="https://m.media-amazon.com/images/I/414ly0wsjYL._SL1000_.jpg" alt="Philips Air Fryer">
+    </div>
+    <div class="product-content">
+      <div class="title">Philips Air Fryer</div>
+      <div class="price">Up to ₹10,000 / $120</div>
+      <a href="https://amzn.to/4kgzH4R" class="buy" target="_blank" rel="noopener">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product" id="sliding-tray" data-name="Sliding Tray">
+    <div class="image-container">
+      <img src="https://m.media-amazon.com/images/I/61rUIJtyEkL._UF1000,1000_QL80_FMwebp_.jpg" alt="Sliding Tray">
+    </div>
+    <div class="product-content">
+      <div class="title">Sliding Tray</div>
+      <div class="price">Under ₹1,000 / $11.99</div>
+      <a href="https://amzn.to/3SS1XQ4" class="buy" target="_blank" rel="noopener">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product" id="vaccum-sealer" data-name="Vacuum Sealer">
+    <div class="image-container">
+      <img src="https://m.media-amazon.com/images/I/71QkgEBOZiL._UF894,1000_QL80_FMwebp_.jpg" alt="Vacuum Sealer">
+    </div>
+    <div class="product-content">
+      <div class="title">Vacuum Sealer</div>
+      <div class="price">Up to ₹3,000 / $35.99</div>
+      <a href="https://amzn.to/3SVcs54" class="buy" target="_blank" rel="noopener">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product" id="mini-sealer" data-name="Mini Sealing Machine">
+    <div class="image-container">
+      <img src="https://m.media-amazon.com/images/I/71utCY3f-JL._UF894,1000_QL80_FMwebp_.jpg" alt="Mini Sealing Machine">
+    </div>
+    <div class="product-content">
+      <div class="title">Mini Sealing Machine</div>
+      <div class="price">Under ₹500 / $3.59</div>
+      <a href="https://amzn.to/4k1PTqE" class="buy" target="_blank" rel="noopener">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product" id="kitchen-mat" data-name="Kitchen Mat">
+    <div class="image-container">
+      <img src="https://m.media-amazon.com/images/I/619hMFvYSoL._UF894,1000_QL80_FMwebp_.jpg" alt="Kitchen Mat">
+    </div>
+    <div class="product-content">
+      <div class="title">Kitchen Mat</div>
+      <div class="price">Under ₹700 / $8.39</div>
+      <a href="https://amzn.to/3HG0ry2" class="buy" target="_blank" rel="noopener">Buy Now</a>
+    </div>
+  </div>
+
+  <div class="product" id="knife-sharpener" data-name="Knife Sharpener">
+    <div class="image-container">
+      <img src="https://m.media-amazon.com/images/I/610WnGc6kPL._UF894,1000_QL80_FMwebp_.jpg" alt="Knife Sharpener">
+    </div>
+    <div class="product-content">
+      <div class="title">Knife Sharpener</div>
+      <div class="price">Under ₹250 / $2.99</div>
+      <a href="https://amzn.to/45TExRW" class="buy" target="_blank" rel="noopener">Buy Now</a>
+    </div>
+  </div>
+</main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>KitchenLink</h3>
+                <p>Your partner for healthy, efficient meal planning that fits your busy lifestyle.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Meal Plans</h3>
+                <ul class="footer-links">
+                    <li><a href="office-meal-plan.html"><i class="fas fa-chevron-right"></i> Office Meal Plans</a></li>
+                    <li><a href="meal-prep.html"><i class="fas fa-chevron-right"></i> Budget Plans</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Vegetarian Plans</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> High-Protein Plans</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Meal Prep Guides</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Recipe Collections</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Grocery Shopping Tips</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Healthy Eating Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto: virapublishers@gmail.com"><i class="fas fa-envelope"></i> kitchenlink@query.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 KitchenLink | Eat Well. Live Smart.
+        </div>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="data.js"></script>
+    
+<script src="data.js"></script>
+<script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.links');
+    const dropdown = document.querySelector('.dropdown');
+    const dropdownContent = document.querySelector('.dropdown-content');
+    const searchInput = document.getElementById('searchInput');
+    const productList = document.getElementById('productList');
+    const allProducts = document.querySelectorAll('.product');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        hamburger.innerHTML = navLinks.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+
+    dropdown.querySelector('.dropbtn').addEventListener('click', (e) => {
+        e.preventDefault();
+        dropdownContent.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+            dropdownContent.classList.remove('show');
+        }
+    });
+
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase().trim();
+
+        allProducts.forEach(product => {
+            const name = product.dataset.name.toLowerCase();
+            if (name.includes(query)) {
+                product.style.display = 'block';
+            } else {
+                product.style.display = 'none';
+            }
+        });
+    });
+</script>
 </body>
 </html>
