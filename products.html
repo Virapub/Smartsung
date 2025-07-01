@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartsung | Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Smartsung</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>All Smart Kitchen Gadgets</h2>
+    <div id="product-list" class="product-grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Smartsung. All rights reserved.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script>
+    const productContainer = document.getElementById("product-list");
+    products.forEach(product => {
+      productContainer.innerHTML += `
+        <div class="product-card">
+          <img src="${product.image}" alt="${product.name}" />
+          <h3>${product.name}</h3>
+          <p>Price: ₹${product.priceINR} | $${product.priceUSD}</p>
+          <a href="${product.link}" target="_blank">Buy Now</a>
+        </div>`;
+    });
+  </script>
+</body>
+</html>

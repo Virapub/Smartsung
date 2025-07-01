@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smartsung | Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Smartsung</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Smartsung Blog</h2>
+    <div id="blog-list" class="blog-grid"></div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Smartsung. All rights reserved.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script>
+    const blogContainer = document.getElementById("blog-list");
+    blogs.forEach(blog => {
+      blogContainer.innerHTML += `
+        <div class="blog-card">
+          <img src="${blog.image}" alt="${blog.title}" />
+          <h3>${blog.title}</h3>
+          <p>${blog.snippet}</p>
+          <span class="category">${blog.category}</span>
+        </div>`;
+    });
+  </script>
+</body>
+</html>

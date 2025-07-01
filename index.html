@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smartsung | Where Smart Kitchens Begin!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Smartsung</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Discover the Smartest Kitchen Gadgets</h2>
+      <p>Explore innovations and recipes that make life easier.</p>
+    </section>
+
+    <section class="featured">
+      <h2>Featured Product</h2>
+      <div id="featured-product"></div>
+    </section>
+
+    <section class="featured-blog">
+      <h2>From the Blog</h2>
+      <div id="featured-blog"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Smartsung. All rights reserved.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script>
+    const product = products[0];
+    const blog = blogs[0];
+
+    document.getElementById("featured-product").innerHTML = `
+      <div class="product-card">
+        <img src="${product.image}" alt="${product.name}" />
+        <h3>${product.name}</h3>
+        <p>Price: ₹${product.priceINR} | $${product.priceUSD}</p>
+        <a href="${product.link}" target="_blank">Buy Now</a>
+      </div>`;
+
+    document.getElementById("featured-blog").innerHTML = `
+      <div class="blog-card">
+        <img src="${blog.image}" alt="${blog.title}" />
+        <h3>${blog.title}</h3>
+        <p>${blog.snippet}</p>
+        <span class="category">${blog.category}</span>
+      </div>`;
+  </script>
+</body>
+</html>
