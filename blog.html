@@ -1,0 +1,71 @@
+
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KitchenLink Blog</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="data.js" defer></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const blogSection = document.getElementById("blog-list");
+      if (data.blogs && data.blogs.length > 0) {
+        data.blogs.forEach(blog => {
+          const div = document.createElement("div");
+          div.className = "card blog-card";
+          div.id = blog.id;div.innerHTML = `
+        <img src="${blog.image}" alt="${blog.title}" style="width:100%; border-radius: 8px; margin-bottom: 1rem;">
+        <h3>${blog.title}</h3>
+        <p>${blog.desc}</p>
+      `;
+
+      blogSection.appendChild(div);
+    });
+  } else {
+    blogSection.innerHTML = "<p>No blog posts available.</p>";
+  }
+});
+
+  </script>
+  <style>
+    .blog-card {
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .blog-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-dark);
+    }
+    .blog-card p {
+      font-size: 1rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav-container">
+    <div class="logo">KitchenLink</div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="blog.html" class="active">Blog</a>
+    </div>
+  </nav>  <header>
+    <h1>KitchenLink Blog</h1>
+    <p>Get healthy recipes, kitchen tips & smart cooking hacks!</p>
+  </header>  <main class="container">
+    <section id="blog-list" class="blog-list"></section>
+  </main>  <footer>
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>KitchenLink</h3>
+        <p>Your partner for healthy, efficient meal planning that fits your busy lifestyle.</p>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 KitchenLink | Eat Well. Live Smart.
+    </div>
+  </footer>
+</body>
+</html>
