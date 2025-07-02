@@ -244,6 +244,16 @@ header p {
     color: white;
 }
 
+/* Button styling ke liye */
+.all-products-btn {
+    display: block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background: #FF6B00;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
 .results-container {
     display: grid;
     gap: 1rem;
