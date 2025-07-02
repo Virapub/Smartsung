@@ -1,1 +1,397 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Office Meal Prep Plan – KitchenLink</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav role="navigation">
+        <div class="nav-container">
+            <div class="logo" aria-label="KitchenLink Logo">KitchenLink</div>
+            <button class="hamburger" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Meal Plans <i class="fas fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="meal-prep.html">Budget Plan</a>
+                        <a href="office-meal-plan.html" class="active">Office Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <i class="decoration fork fas fa-utensils"></i>
+        <i class="decoration knife fas fa-utensil-spoon"></i>
+        <h1>Weekly Meal Prep Plan for Office-Goers</h1>
+        <p>Balanced, Tasty & Easy – with an Indian & Global Twist!</p>
+    </header>
+
+    <div class="search">
+        <input type="text" id="searchInput" placeholder="Search meals..." aria-label="Search meal plans">
+    </div>
+
+    <div class="search-results" id="searchResults"></div>
+
+    <div class="container">
+        <div class="card">
+            <h2><i class="fas fa-heart"></i> Why This Plan Works</h2>
+            <p class="intro">
+                If you're a working professional, cooking every day can be exhausting. This plan gives you variety, nutrition, and minimal prep time.
+                We've blended Indian staples with global light options to keep it exciting and practical!
+            </p>
+            <div class="benefits">
+                <div class="benefit-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Time Efficient</h3>
+                    <p>Only 2-3 hours of prep on Sunday</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-apple-alt"></i>
+                    <h3>Nutrition Balanced</h3>
+                    <p>Optimal protein, carbs and nutrients</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Variety of Cuisines</h3>
+                    <p>Mix of Indian and global flavors</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-wallet"></i>
+                    <h3>Budget Friendly</h3>
+                    <p>Saves money vs eating out daily</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-calendar-alt"></i> 5-Day Meal Plan</h2>
+            <div class="meal-plan" id="mealPlan">
+                <!-- Meal plan content will be generated from data.js -->
+            </div>
+            <div class="tip-box">
+                <i class="fas fa-lightbulb"></i>
+                <div>
+                    <strong>Prep Tip:</strong> Plan your groceries on Sunday, prep basic veggies, boil chickpeas, 
+                    make curd at home and store neatly in airtight containers. This will save you 60-90 minutes 
+                    of prep time during weekdays!
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-shopping-cart"></i> Grocery List</h2>
+            <div class="grocery-section">
+                <h3>Produce</h3>
+                <div class="grocery-grid">
+                    <div class="grocery-card">
+                        <i class="fas fa-carrot"></i>
+                        <div>Vegetables (Spinach, Okra, Mixed Veg)</div>
+                    </div>
+                    <div class="grocery-card">
+                        <i class="fas fa-apple-alt"></i>
+                        <div>Fruits (Bananas, Avocado, Lemon)</div>
+                    </div>
+                    <div class="grocery-card">
+                        <i class="fas fa-leaf"></i>
+                        <div>Fresh Herbs (Coriander, Curry Leaves)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grocery-section">
+                <h3>Pantry</h3>
+                <div class="grocery-grid">
+                    <div class="grocery-card">
+                        <i class="fas fa-wheat-awn"></i>
+                        <div>Grains (Rice, Quinoa, Oats, Poha)</div>
+                    </div>
+                    <div class="grocery-card">
+                        <i class="fas fa-jar"></i>
+                        <div>Legumes (Chickpeas, Rajma, Dal)</div>
+                    </div>
+                    <div class="grocery-card">
+                        <i class="fas fa-mortar-pestle"></i>
+                        <div>Spices (Cumin, Mustard, Turmeric)</div>
+                    </div>
+                </div>
+            </div>
+            <div class="grocery-section">
+                <h3>Dairy & Proteins</h3>
+                <div class="grocery-grid">
+                    <div class="grocery-card">
+                        <i class="fas fa-egg"></i>
+                        <div>Eggs & Paneer</div>
+                    </div>
+                    <div class="grocery-card">
+                        <i class="fas fa-cow"></i>
+                        <div>Milk & Curd</div>
+                    </div>
+                    <div class="grocery-card">
+                        <i class="fas fa-bread-slice"></i>
+                        <div>Bread & Tortillas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>KitchenLink</h3>
+                <p>Your partner for healthy, efficient meal planning that fits your busy lifestyle.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Meal Plans</h3>
+                <ul class="footer-links">
+                    <li><a href="office-meal-plan.html"><i class="fas fa-chevron-right"></i> Office Meal Plans</a></li>
+                    <li><a href="meal-prep.html"><i class="fas fa-chevron-right"></i> Budget Plans</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Vegetarian Plans</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> High-Protein Plans</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Meal Prep Guides</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Recipe Collections</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Grocery Shopping Tips</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Healthy Eating Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto: virapublishers@gmail.com"><i class="fas fa-envelope"></i> kitchenlink@query.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 KitchenLink | Eat Well. Live Smart.
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script>
+        // DOM Elements
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.links');
+        const dropdown = document.querySelector('.dropdown');
+        const dropdownContent = document.querySelector('.dropdown-content');
+        const searchInput = document.getElementById('searchInput');
+        const searchResults = document.getElementById('searchResults');
+        const mealPlan = document.getElementById('mealPlan');
+
+        // Generate meal plan
+        function generateMealPlan() {
+            let html = '';
+            data.mealPlans.office.forEach(day => {
+                const meals = day.name.split(', ');
+                html += `
+                    <div class="meal-day" id="${day.id}" data-name="${day.name}">
+                        <h3>${day.day}</h3>
+                        <div class="meal-item">
+                            <i class="fas fa-coffee"></i>
+                            <div class="meal-content">
+                                <div class="meal-title">${meals[0]}</div>
+                                <div class="meal-desc">${data.mealPlans.office.find(d => d.id === day.id).description}</div>
+                            </div>
+                        </div>
+                        <div class="meal-item">
+                            <i class="fas fa-apple-alt"></i>
+                            <div class="meal-content">
+                                <div class="meal-title">${meals[1]}</div>
+                                <div class="meal-desc">Balanced and nutritious</div>
+                            </div>
+                        </div>
+                        <div class="meal-item">
+                            <i class="fas fa-moon"></i>
+                            <div class="meal-content">
+                                <div class="meal-title">${meals[2]}</div>
+                                <div class="meal-desc">Delicious and satisfying</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            mealPlan.innerHTML = html;
+        }
+
+        // Initialize meal plan
+        generateMealPlan();
+
+        // Navigation Menu Toggle
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.innerHTML = navLinks.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+
+        // Dropdown Menu Toggle
+        dropdown.querySelector('.dropbtn').addEventListener('click', (e) => {
+            e.preventDefault();
+            dropdownContent.classList.toggle('show');
+        });
+
+        // Close Dropdown When Clicking Outside
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdownContent.classList.remove('show');
+            }
+        });
+
+        // Debounce Function
+        function debounce(func, timeout = 300) {
+            let timer;
+            return (...args) => {
+                clearTimeout(timer);
+                timer = setTimeout(() => { func.apply(this, args); }, timeout);
+            };
+        }
+
+        // Highlight Matches in Search Results
+        function highlightMatches(text, query) {
+            if (!query) return text;
+            const regex = new RegExp(query, 'gi');
+            return text.replace(regex, match => `<span class="highlight">${match}</span>`);
+        }
+
+        // Perform Search
+        const performSearch = debounce(() => {
+            const query = searchInput.value.toLowerCase().trim();
+            searchResults.innerHTML = '';
+            
+            if (!query) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            searchResults.style.display = 'block';
+
+            // Search products
+            const productResults = data.products.filter(product => 
+                product.name.toLowerCase().includes(query) || 
+                product.description.toLowerCase().includes(query)
+            );
+
+            // Search meal plans
+            const officeMealResults = data.mealPlans.office.filter(meal => 
+                meal.name.toLowerCase().includes(query) || 
+                meal.day.toLowerCase().includes(query)
+            );
+            
+            const budgetMealResults = data.mealPlans.budget.filter(meal => 
+                meal.name.toLowerCase().includes(query) || 
+                meal.day.toLowerCase().includes(query)
+            );
+
+            if (productResults.length + officeMealResults.length + budgetMealResults.length === 0) {
+                searchResults.innerHTML = '<p class="no-results">No results found for "' + query + '"</p>';
+                return;
+            }
+
+            let resultsHTML = '<div class="search-results-header">';
+            resultsHTML += `<h3>Search Results for "${query}"</h3>`;
+            resultsHTML += '<div class="search-filters">';
+            resultsHTML += '<button class="filter-btn active" data-filter="all">All</button>';
+            resultsHTML += '<button class="filter-btn" data-filter="products">Products</button>';
+            resultsHTML += '<button class="filter-btn" data-filter="meals">Meal Plans</button>';
+            resultsHTML += '</div></div>';
+
+            resultsHTML += '<div class="results-container">';
+
+            if (productResults.length > 0) {
+                resultsHTML += '<div class="result-section" data-type="products">';
+                resultsHTML += '<h4>Products (' + productResults.length + ')</h4>';
+                
+                productResults.forEach(product => {
+                    resultsHTML += `
+                        <div class="search-result">
+                            <a href="${product.page || product.link}">
+                                <div class="result-image">
+                                    <img src="${product.image}" alt="${product.name}" loading="lazy">
+                                </div>
+                                <div class="result-content">
+                                    <div class="result-title">${highlightMatches(product.name, query)}</div>
+                                    <div class="result-description">${highlightMatches(product.description, query)}</div>
+                                    <div class="result-type">Product - ₹${product.priceINR} / $${product.priceUSD}</div>
+                                </div>
+                            </a>
+                        </div>
+                    `;
+                });
+                resultsHTML += '</div>';
+            }
+
+            if (officeMealResults.length > 0 || budgetMealResults.length > 0) {
+                resultsHTML += '<div class="result-section" data-type="meals">';
+                resultsHTML += '<h4>Meal Plans (' + (officeMealResults.length + budgetMealResults.length) + ')</h4>';
+                
+                officeMealResults.forEach(meal => {
+                    resultsHTML += `
+                        <div class="search-result">
+                            <a href="${meal.page}">
+                                <div class="result-content">
+                                    <div class="result-title">${highlightMatches(meal.day, query)} - Office Plan</div>
+                                    <div class="result-description">${highlightMatches(meal.name, query)}</div>
+                                    <div class="result-type">Meal Plan - ${meal.prepTime} prep</div>
+                                </div>
+                            </a>
+                        </div>
+                    `;
+                });
+
+                budgetMealResults.forEach(meal => {
+                    resultsHTML += `
+                        <div class="search-result">
+                            <a href="${meal.page}">
+                                <div class="result-content">
+                                    <div class="result-title">${highlightMatches(meal.day, query)} - Budget Plan</div>
+                                    <div class="result-description">${highlightMatches(meal.name, query)}</div>
+                                    <div class="result-type">Meal Plan - ${meal.prepTime} prep</div>
+                                </div>
+                            </a>
+                        </div>
+                    `;
+                });
+                resultsHTML += '</div>';
+            }
+
+            resultsHTML += '</div>'; // Close results-container
+            searchResults.innerHTML = resultsHTML;
+
+            // Add filter button functionality
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    const filter = btn.dataset.filter;
+                    document.querySelectorAll('.result-section').forEach(section => {
+                        if (filter === 'all') {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = section.dataset.type === filter ? 'block' : 'none';
+                        }
+                    });
+                });
+            });
+        });
+
+        // Initialize search
+        searchInput.addEventListener('input', performSearch);
+    </script>
+</body>
+</html>
