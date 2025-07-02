@@ -1,50 +1,47 @@
 const products = [
-  {
-    id: "p1",
-    name: "Auto Stirring Mug",
-    priceINR: 599,
-    priceUSD: 7,
-    image: "https://via.placeholder.com/200x150?text=Auto+Mug",
-    link: "https://amzn.to/3auto-mug"
-  },
-  {
-    id: "p2",
-    name: "3-in-1 Breakfast Maker",
-    priceINR: 3499,
-    priceUSD: 42,
-    image: "https://via.placeholder.com/200x150?text=Breakfast+Maker",
-    link: "https://amzn.to/3breakfast"
-  },
-  {
-    id: "p3",
-    name: "Smart Air Fryer",
-    priceINR: 4999,
-    priceUSD: 60,
-    image: "https://via.placeholder.com/200x150?text=Air+Fryer",
-    link: "https://amzn.to/3airfryer"
-  }
-];
-
-const blogs = [
-  {
-    id: "b1",
-    title: "Top 5 Smart Kitchen Gadgets in 2025",
-    snippet: "Discover the latest must-haves that save time and space in your kitchen.",
-    image: "https://via.placeholder.com/300x200?text=Smart+Gadgets",
-    category: "gadgets"
-  },
-  {
-    id: "b2",
-    title: "Quick & Healthy Salad Recipes",
-    snippet: "Whip up fresh, nutritious meals in under 10 minutes.",
-    image: "https://via.placeholder.com/300x200?text=Salad+Recipes",
-    category: "recipes"
-  },
-  {
-    id: "b3",
-    title: "Why You Need an Air Fryer in 2025",
-    snippet: "Air fryers are more than a trend – they are a healthy lifestyle essential!",
-    image: "https://via.placeholder.com/300x200?text=Air+Fryer+Benefits",
-    category: "gadgets"
-  }
+{
+  id: "product-collapsible-kettle",
+  name: "Collapsible Electric Kettle",
+  description: "Compact for small kitchens/travel. “Van life” aur dorm hacks ke saath viral.",
+  priceINR: 1499,
+  priceUSD: 18,
+  image: "https://m.media-amazon.com/images/I/61WQVNM0LCL._SL1500_.jpg",
+  link: "https://amzn.to/448SSZx"
+},
+{
+  id: "product-soap-dispenser",
+  name: "Automatic Soap Dispenser",
+  description: "Aesthetic, touchless & perfect for clean kitchen vibes. Often paired with minimal sink setup reels.",
+  priceINR: 1388,
+  priceUSD: 17,
+  image: "https://m.media-amazon.com/images/I/61Vqx4KEHuL._SL1024_.jpg",
+  link: "https://amzn.to/46sLIRc"
+},
+{
+  id: "product-fridge-shelf",
+  name: "Magnetic Fridge Shelf Rack",
+  description: "Smart storage solution for small kitchens. “Amazon must-haves” reels me trending.",
+  priceINR: 1199,
+  priceUSD: 14,
+  image: "https://m.media-amazon.com/images/I/81gCEjDOpSL._SL1500_.jpg",
+  link: "https://amzn.to/44rEZEO"
+},
+{
+  id: "product-fridge-bins",
+  name: "Fridge Organizer Bins (Clear, Stackable)",
+  description: "Satisfying “restock the fridge” videos ke hero product. Crystal clear & aesthetic.",
+  priceINR: 2395,
+  priceUSD: 29,
+  image: "https://m.media-amazon.com/images/I/71S+IrhvQPL._SL1500_.jpg",
+  link: "https://amzn.to/3I98vaY"
+},
+{
+  id: "product-smart-trashcan",
+  name: "Smart Trash Can with Motion Sensor",
+  description: "Luxury kitchen reels me highly featured. Pinterest pe “clean kitchen goals” boards me pinned.",
+  priceINR: 2999,
+  priceUSD: 36,
+  image: "https://m.media-amazon.com/images/I/615kYHdRG0L._SL1500_.jpg",
+  link: "https://amzn.to/4euARZe"
+}
 ];
